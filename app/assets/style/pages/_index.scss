@@ -1,0 +1,376 @@
+.hero {
+  background-image: url('../images/home-header.png');
+  height: 78.7rem;
+  background-position: center;
+  background-size: cover;
+  color: $font-default-red;
+
+  .hero-section {
+    text-align: right;
+    height: 100%;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    h3 {
+      font-size: 3.6rem;
+    }
+
+    h1 {
+      font-size: 6.4rem;
+      font-weight: bold;
+    }
+    button {
+      color: white;
+      background-color: $red;
+      padding: 0.6rem 1.2rem;
+      font-size: 2rem;
+      &:hover {
+        background-color: $hover-red;
+      }
+    }
+  }
+}
+
+.features {
+  background-color: $light-red;
+  text-align: center;
+  @include section-padding;
+
+  h2 {
+    @include default-h2;
+    margin-bottom: 3.2rem;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+    .feature-list-item {
+      width: calc((100% - 7.2rem) / 4);
+      img {
+        width: 8.4rem;
+        height: 8.4rem;
+        margin-bottom: 2.4rem;
+      }
+
+      h4 {
+        color: $font-default-red;
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.classic {
+  .classic-container {
+    @include section-padding;
+  }
+
+  h2 {
+    @include default-h2;
+  }
+
+  .classic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+    .classic-list-item {
+      width: calc((100% - 4.8rem) / 3);
+      img {
+        margin-bottom: 0.8rem;
+      }
+
+      h5 {
+        text-align: center;
+        font-size: 4.8rem;
+        font-style: italic;
+        font-weight: bold;
+        color: $red;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.co-branding {
+  @include section-padding;
+  background-image: url(../images/co-branding-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  .co-branding-container {
+    padding: 0 1.2rem;
+
+    img {
+      object-fit: cover;
+    }
+
+    h5 {
+      padding: 0.8rem 0;
+    }
+  }
+
+  h2 {
+    @include default-h2;
+    color: white;
+  }
+
+  .co-branding-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .co-branding-list-item {
+      width: 50%;
+
+      h5 {
+        font-weight: bold;
+        font-size: 4.8rem;
+        color: $red;
+        background-color: white;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.testimonial {
+  @include section-padding;
+
+  h2 {
+    @include default-h2;
+  }
+
+  .testimonial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+
+    .testimonial-list-item {
+      width: calc((100% - 7.2rem) / 4);
+      border: 1px solid $card-border-color;
+      box-shadow: 0px 2px 6px #00000029;
+      border-radius: 0.4rem;
+
+      img {
+        object-fit: cover;
+      }
+
+      .testimonial-info {
+        padding: 1.6rem;
+        height: 20.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .testimonial-name {
+          font-weight: 500;
+          margin-bottom: 0.8rem;
+        }
+
+        .testimonial-text {
+          flex-grow: 1;
+        }
+
+        .testimonial-date {
+          color: #707070;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  background-color: $light-red;
+  @include section-padding;
+
+  input,
+  textarea {
+    background-color: transparent;
+    accent-color: transparent;
+  }
+
+  .contact-section {
+    max-width: 63.6rem;
+
+    h2 {
+      @include default-h2;
+    }
+
+    .contact-text {
+      font-size: 2rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .contact-form {
+      .form-input {
+        label {
+          display: block;
+          margin-bottom: 0.8rem;
+        }
+        input,
+        textarea {
+          font-size: 1.6rem;
+          border: 1px solid black;
+          padding: 0.6rem 1.2rem;
+          width: 100%;
+          margin-bottom: 1.6rem;
+        }
+
+        .review-input {
+          height: 13.6rem;
+        }
+      }
+
+      .form-agreement {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4.8rem;
+
+        input {
+          width: 2.4rem;
+          height: 2.4rem;
+          margin-right: 0.4rem;
+        }
+      }
+
+      button {
+        color: white;
+        text-align: center;
+        padding: 1.6rem 17.6rem;
+        font-size: 1.6rem;
+        background-color: $red;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// tablet: 992px
+@include pad {
+  .features {
+    .feature-list {
+      .feature-list-item {
+        width: calc((100% - 2.4rem) / 2);
+      }
+    }
+  }
+
+  .classic {
+    .classic-list {
+      text-align: center;
+      gap: 2.4rem;
+      .classic-list-item {
+        width: 100%;
+
+        img {
+          width: 33.6rem;
+          height: 33.6rem;
+        }
+      }
+    }
+  }
+
+  .co-branding {
+    .co-branding-list {
+      gap: 2.4rem;
+      .co-branding-list-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .testimonial {
+    .testimonial-list {
+      .testimonial-list-item {
+        width: calc((100% - 2.4rem) / 2);
+      }
+    }
+  }
+
+  .contact-section.container {
+    padding: 0;
+
+    .contact-text {
+      font-size: 1.6rem;
+    }
+
+    .contact-form {
+      button {
+        padding: 1.6rem 13.6rem;
+      }
+    }
+  }
+}
+
+// phone: 768px
+@include mobile {
+  .hero {
+    height: 39.6rem;
+
+    .hero-section {
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .features {
+    .feature-list {
+      .feature-list-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .co-branding {
+    .co-branding-container {
+      ul li img {
+        min-height: 24rem;
+      }
+    }
+  }
+
+  .testimonial {
+    .testimonial-section {
+      padding: 0 1.4rem;
+      .testimonial-list-item {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    .contact-section {
+      padding: 0 1.3rem;
+
+      .contact-form {
+        .form-agreement {
+          align-items: start;
+          margin-bottom: 2.4rem;
+        }
+        button {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.faq {
+  padding: 9.6rem 0 8rem 0;
+
+  @include pad {
+    padding-top: 8rem;
+  }
+
+  @include mobile {
+    padding: 4.4rem 0 4rem 0;
+  }
+
+  .faq-section {
+    h1 {
+      @include default-h1;
+    }
+
+    h5 {
+      font-weight: bold;
+      font-size: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .faq-question {
+    margin-bottom: 2.4rem;
+
+    h6 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
