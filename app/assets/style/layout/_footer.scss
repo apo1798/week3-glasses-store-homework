@@ -1,0 +1,134 @@
+.footer {
+  background-color: $red;
+  color: white;
+  .footer-section {
+    padding: 6rem 3.6rem 3.2rem;
+
+    .footer-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.4rem;
+
+      nav ul {
+        display: flex;
+        gap: 4.8rem;
+      }
+
+      .social-links ul {
+        display: flex;
+        gap: 3.2rem;
+
+        img {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
+      }
+    }
+
+    address {
+      font-size: 3.6rem;
+      font-style: normal;
+
+      padding-bottom: 3.2rem;
+      border-bottom: 1px solid white;
+      margin-bottom: 3.2rem;
+      font-family: 'Noto Sans TC', sans-serif;
+
+      ul li {
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+      }
+
+      .material-icons-outlined {
+        font-size: 3.6rem;
+      }
+
+      a:hover {
+        color: inherit;
+      }
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        gap: 4.8rem;
+      }
+    }
+  }
+}
+
+@include pad {
+  .footer {
+    .footer-navigation {
+      .social-links ul {
+        gap: 1.6rem;
+
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    .footer-section {
+      padding: 2.4rem 1.6rem;
+      position: relative;
+      .footer-navigation {
+        margin-bottom: 0;
+        nav {
+          display: none;
+        }
+
+        .social-links {
+          position: absolute;
+          top: 2.4rem;
+          right: 1.4rem;
+          ul {
+            gap: 0.8rem;
+            li img {
+              height: 2.4rem;
+              width: 2.4rem;
+            }
+          }
+        }
+      }
+
+      address {
+        font-size: 1.6rem;
+        padding-bottom: 2.4rem;
+        margin-bottom: 1.6rem;
+
+        ul li {
+          gap: 0.8rem;
+        }
+        .material-icons-outlined {
+          font-size: 1.8rem;
+        }
+      }
+
+      .copyright {
+        display: block;
+        p {
+          margin-bottom: 0.8rem;
+        }
+
+        ul {
+          display: block;
+
+          * + * {
+            margin-top: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
